@@ -16,13 +16,13 @@ Javella et al. only provided already normalized counts so we could not map and c
 3. Clean up the counts: Cleans up the counts: links NanoString to isoforms, cleans up naming and gene names with `Get_Final_RNAseq_Counts.ipynb`
 
 ### Initial Comparison and calculation of L2FCs (Exploratory)
-1. `Compare_L2FC_11.24.25.ipynb`: Calculate log2FC, and do initial exploratory comparisons
+1. `Compare_L2FC.ipynb`: Calculate log2FC, and do initial exploratory comparisons
 
 ### Prediction of NanoString vs RNAseq samples or PFS
 Feature selection was done with two approaches: 
 * Consistent: Only consider genes which were in the top X predictors across Y experiments (based on F-score).
 * Bootstrapping: Only consider genes that were found in the top X predictors (based on F-score) across a fraction of at least X of bootstrapped samples (with weighted bootstrapping).
 
-1. `Cons_Iter_Feature_11.3.25.ipynb`: Feature selection using consistent approaches for model prediction of NanoString and PFS.
-2. `BootStrap_Feature_11.3.25.ipynb`: Feature selection using bootstrapping approaches for model prediction of NanoString and PFS.
-3. `ModelPred_FullRnaIsof_11.7.25.ipynb`: Feature selection using both consistent & bootstrapping approaches. Model prediction of PFS considering full RNA-seq data (both the normal RNA-seq dataset and using the more independent set)
+1. `ModelPred_ConsFS.ipynb`: Feature selection using consistent approaches for model prediction of NanoString and PFS.
+2. `ModelPred_BootStrapFS.ipynb`: Feature selection using bootstrapping approaches for model prediction of NanoString and PFS.
+3. `ModelPred_FullRnaIsof.ipynb`: Feature selection using both consistent & bootstrapping approaches. Model prediction of PFS considering full RNA-seq data (both the normal RNA-seq dataset and using the more independent set)
