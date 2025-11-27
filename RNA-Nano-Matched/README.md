@@ -1,7 +1,9 @@
 ## Matched Data
 
+Scripts and notebooks are found under notebooks/
+
 ### Prep the data
-1. Ran RNA-seq-flow with `RNA_Matched_3.19.25.sh` on the fastq files (Clauset_ABNexus/RNAseq_flow_out). This got us the bams.
+1. Ran [RNA-seq-flow](https://github.com/Dowell-Lab/RNAseq-Flow) with `RNA_Matched_3.19.25.sh` on the fastq files (available in GEO X) (Clauset_ABNexus/RNAseq_flow_out). This got us the bams and QC results. 
 ### Match Probes to Isoforms/Exons
 * Clauset_ABNexus/Probe_pre/bin/
 1. `Get_Probes_fasta.ipynb` creates fastq sequences from the probe regions that will be used for HISAT2
@@ -19,4 +21,9 @@
 
 ### Final Comparisons
 1. `Evaluate_Harmonization_10.20.25.ipynb`
+  * Evaluate correlation of NanoString and RNAseq expression (across 6 harmonization approaches) both across patients (per-gene coefficients) and within patients (per-patient coefficients)
+  * Show what trends (e.g. expression levels or exon number) might explain why some genes have poor correlation, regardless of harmonization approach
+    * Estimate limits of detection based on expression levels and range of expression for which NanoString and RNA-seq can be fairly compared
+  * Show what trends (e.g. exon number ) might explain why some genes have better harmonization when considering different harmonization approaches (e.g. Isoform- vs Exon-based counts, or length-based vs other normalization approaches)
 2. `Evaluate_Harmonization_Post.ipynb`
+  * Evaluate impact on harmonization from removing cases below limits of detection.
