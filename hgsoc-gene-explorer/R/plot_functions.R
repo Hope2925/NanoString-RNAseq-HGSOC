@@ -3,8 +3,12 @@ library(cowplot)
 library(ggpubr) 
 library(ggrepel)
 library(patchwork)
-color_dict = list("Nano\nManso"="#4876FF", "Nano\nJames"="#27408B", "Nano\nBitler"="#009ACD",
-        "RNAseq\nAdzib"="#FF7F00", "RNAseq\nJav"="#8B4500", "RNAseq\nEGA"="#CD6600",
+library(ComplexHeatmap)
+library(colorRamp2)
+#library(circlize)
+color_dict = list("Nano\nManso"="#FDAE6B", "Nano\nJames"="#D94801", "Nano\nBitler"="#7F2704",
+        "RNAseq\nAdzib"="#3f007d", "RNAseq\nJav"="#bcbddc", "RNAseq\nEGA"="#807dba",
+        "Microarray\nJimSanchez"="gold",
         "PFS>12"="#008B45", "PFS<=12"="grey"   
 )
 
@@ -25,7 +29,8 @@ p <- ggplot(plot_df, aes(x = factor(Graphing_Time, levels=c("Pre", "Post", "Pre_
     scale_color_manual(values=c(">12mth"="springgreen4", "<=12mth"="grey")) +
     # ["RNAseq_A", "RNAseq_J", "RNAseq_EGA", "Nano_M", "Nano_B", "Nano_J"]
   theme_bw(base_size = 20) + facet_wrap(~factor(Experiment, levels=c("RNAseq\nAdzib", "RNAseq\nJav", "RNAseq\nEGA", 
-                                                                     "Nano\nManso", "Nano\nBitler", "Nano\nJames" 
+                                                                     "Nano\nManso", "Nano\nBitler", "Nano\nJames" , 
+                                                                     "Microarray\nJimSanchez"
                                                                      )), scale="free_y", nrow=2)
 
 print(p)
@@ -63,9 +68,22 @@ plot_l2fc <- function(gene_of_interest, full_l2fc, nano_gene) {
 	if (!nano_gene) {
 	plot_l2fc_df = plot_l2fc_df[plot_l2fc_df$Experiment %in% c("RNAseq\nEGA", "RNAseq\nJav", "RNAseq\nAdzib"),]
 	}
+  # get the Microarray data
+  plot_l2fc_micro_df = plot_l2fc_df[plot_l2fc_df$Experiment %in% c("Microarray\nJimSanchez"),]
+  plot_l2fc_df = plot_l2fc_df[!plot_l2fc_df$Experiment %in% c("Microarray\nJimSanchez"),]
 	# --- 1) Compute t-tests per Experiment ---
 	t_test_exp <- plot_l2fc_df %>%
 	group_by(Experiment) %>%
+	summarise(
+		t_stat  = tryCatch(t.test(Gene ~ PFS_bool)$statistic, error=function(e) NA),
+		p_value = tryCatch(t.test(Gene ~ PFS_bool)$p.value,    error=function(e) NA)
+	) %>%
+	mutate(
+		label = sprintf("p=%.2g", p_value)
+	)
+
+  t_test_micro <- plot_l2fc_micro_df %>% 
+  group_by(Experiment) %>%
 	summarise(
 		t_stat  = tryCatch(t.test(Gene ~ PFS_bool)$statistic, error=function(e) NA),
 		p_value = tryCatch(t.test(Gene ~ PFS_bool)$p.value,    error=function(e) NA)
@@ -91,11 +109,29 @@ plot_l2fc <- function(gene_of_interest, full_l2fc, nano_gene) {
 	scale_fill_manual(values=c(">12mths"="springgreen4", "<=12mths"="grey")) +
 	theme_bw(base_size=20)
 
+  p_micro <- ggplot(plot_l2fc_micro_df, aes(x=Experiment, y=Gene)) +
+	geom_boxplot(aes(fill=PFS_bool)) +
+	geom_hline(yintercept=0) +
+	labs(
+		y=paste(gene_of_interest, " Log2FC"), fill="PFS Group"
+	) +
+	scale_fill_manual(values=c(">12mths"="springgreen4", "<=12mths"="grey")) +
+	theme_bw(base_size=20)
+
 	# --- 4) Add per-experiment t-test labels ---
 	p <- p + geom_text(
 	data = t_test_exp,
 	aes(x = Experiment,
 		y = max(plot_l2fc_df$Gene, na.rm=TRUE) * 1.05,
+		label = label
+	),
+	size = 4.5
+	)
+
+  p_micro <- p_micro + geom_text(
+	data = t_test_micro,
+	aes(x = Experiment,
+		y = max(plot_l2fc_micro_df$Gene, na.rm=TRUE) * 1.05,
 		label = label
 	),
 	size = 4.5
@@ -107,7 +143,14 @@ plot_l2fc <- function(gene_of_interest, full_l2fc, nano_gene) {
 	label = global_label, hjust = 1, vjust = 1, size = 6
 	)
 
-	print(p)
+
+	#print(p)
+  print(plot_grid(
+  p,
+  plot_grid(p_micro, NULL, rel_widths = c(0.5, 0.5)),
+  ncol = 1,
+  rel_heights = c(1, 1)
+))
 }
 
 plot_l2fc_corr_PFS <- function(gene_of_interest, full_l2fc, nano_gene) {
@@ -117,24 +160,49 @@ plot_l2fc_corr_PFS <- function(gene_of_interest, full_l2fc, nano_gene) {
 	plot_l2fc_df = plot_l2fc_df[plot_l2fc_df$Experiment %in% c("RNAseq\nEGA", "RNAseq\nJav", "RNAseq\nAdzib"),]
 	}
   plot_l2fc_df$log10_PFS_mths = log10(plot_l2fc_df$PFS_mths+0.5)
+  # get the Microarray data
+  plot_l2fc_micro_df = plot_l2fc_df[plot_l2fc_df$Experiment %in% c("Microarray\nJimSanchez"),]
+  plot_l2fc_df = plot_l2fc_df[!plot_l2fc_df$Experiment %in% c("Microarray\nJimSanchez"),]
   # All the data
   p1 <- ggplot(plot_l2fc_df, aes(x=Gene, y=log10_PFS_mths)) + 
   geom_point(aes(color=Experiment)) + theme_bw(base_size=20) + 
   labs(x=paste(gene_of_interest, " Log2FC"), y="log10(PFS+0.5)") + #facet_wrap(~Assay, scales="free_x") + 
-  geom_hline(yintercept=log10(12.01)) + scale_color_manual(values=color_dict) + 
+  geom_hline(yintercept=log10(12.01)) + geom_vline(xintercept=log2(1)) + scale_color_manual(values=color_dict) + 
   geom_smooth(method = "lm", se = TRUE, color = "black") +
   stat_regline_equation(aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~~")),
-                              label.x = min(plot_l2fc_df$Gene), label.y = -0.5)  
+                              label.x = min(plot_l2fc_df$Gene), label.y = -0.5, size=6)  
+
+  p1_micro <- ggplot(plot_l2fc_micro_df, aes(x=Gene, y=log10_PFS_mths)) + 
+  geom_point(aes(color=Experiment)) + theme_bw(base_size=20) + 
+  labs(x=paste(gene_of_interest, " Log2FC"), y="log10(PFS+0.5)") + #facet_wrap(~Assay, scales="free_x") + 
+  geom_hline(yintercept=log10(12.01)) + geom_vline(xintercept=log2(1)) + scale_color_manual(values=color_dict) + 
+  geom_smooth(method = "lm", se = TRUE, color = "black") +
+  stat_regline_equation(aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~~")),
+                              label.x = min(plot_l2fc_micro_df$Gene), label.y = -0.5, size=6)  
 
   # Facet by Experiment
   p2 <- ggplot(plot_l2fc_df, aes(x=Gene, y=log10_PFS_mths, color=Experiment)) + 
     geom_point() + theme_bw(base_size=15) + 
     labs(x=paste(gene_of_interest, " Log2FC"), y="log10(PFS+0.5)") + #facet_wrap(~Assay, scales="free_x") + 
-    geom_hline(yintercept=log10(12.01)) + scale_color_manual(values=color_dict) + 
+    geom_hline(yintercept=log10(12.01)) + geom_vline(xintercept=log2(1)) + scale_color_manual(values=color_dict) + 
     geom_smooth(method = "lm", se = TRUE) + facet_wrap(~Experiment) +
     stat_regline_equation(size=5, aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~~")),
                                 label.x = min(plot_l2fc_df$Gene), label.y = -0.5)  
-  print(plot_grid(p1, p2, rel_heights=c(1,1.6), nrow=2))
+
+  top_row <- plot_grid(
+  p1, p1_micro,
+  ncol = 2,
+  rel_widths = c(1, 1)
+)
+
+final_plot <- plot_grid(
+  top_row,
+  p2,
+  ncol = 1,
+  rel_heights = c(1, 2)
+)
+
+print(final_plot)
 }
 
 #########################
@@ -205,4 +273,77 @@ plot_gene_scatter_main <- function(gene, df_list, ref_df, outlier_sd = 2) {
   } else {
     print(plots[[1]])
   }
+}
+
+#########################
+#### SC #########
+#########################
+
+graph_gene_prepost_heatmap <- function(
+    dfs, # should have full, pre, post with rownames=genes, and colnames=ct in ct_order
+    gene,
+    ct_order = c("All", "EOC_C1", "EOC_C2", "EOC_C3", "EOC_C4", "EOC_C5", "EOC_C6", "EOC_C7", "EOC_C8", "EOC_C9", 
+"EOC_C10", "EOC_C11", "EOC_C12", 
+
+"CAF-1", "CAF-2", "CAF-3", "Mesothelial", "Endothelial",
+
+"B-cells", "Plasma-cells", "T-cells", "NK", 
+"ILC", "Mast-cells", "pDC", "DC-1", "DC-2", "Macrophages")
+) {
+
+    # CHECKS
+    missing <- sapply(dfs, function(df) !(gene %in% rownames(df)))
+    if (any(missing)) {
+        stop(
+            "Gene missing in: ",
+            paste(names(missing)[missing], collapse = ", ")
+        )
+    }
+
+    # Get in proper order
+    dfs <- lapply(dfs, function(df) {
+        mat <- as.matrix(df)
+
+        if (!is.null(ct_order)) {
+            mat <- mat[, ct_order, drop = FALSE]
+        }
+
+        mat
+    })
+
+    ## EXTRACT GENE
+    gene_mat <- do.call(
+        rbind,
+        lapply(dfs, function(mat) mat[gene, , drop = FALSE])
+    )
+
+    rownames(gene_mat) <- names(dfs)
+
+    ## COLOR FUNCTION
+		col_fun <- colorRamp2(
+	  c(0,  max(gene_mat, na.rm=TRUE)),
+	  c("white", "red")
+	  )
+
+    ## PLOT
+    ct_annot_vector = c("All", rep("EOC",12), rep("Stroma", 5), rep("Immune", 10))
+    ct_anno <- HeatmapAnnotation(
+      CellType = ct_annot_vector, # named vector or factor, length = nrow(mat)
+      col = list(CellType = c("All"="black","EOC"="#6a6868", "Stroma"="grey20", "Immune"="grey80"))
+    )
+    p <- Heatmap(
+        gene_mat,
+        name = paste0(gene, " CPM"),
+        col = col_fun,
+        cluster_rows = FALSE,
+        cluster_columns = FALSE,
+        column_names_rot = 45,
+		top_annotation = ct_anno,
+        column_split = ct_annot_vector,
+        rect_gp = gpar(col = "black", lwd = 0.5),
+        row_names_side = "left", 
+
+    )
+	grid::grid.newpage()
+	print(ComplexHeatmap::draw(p, newpage = TRUE))
 }

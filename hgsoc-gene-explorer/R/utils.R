@@ -23,15 +23,16 @@ reshape_for_gene <- function(mat, exp_name, gene, meta) {
   return(df)
 }
 
+# Get the plot df
 get_matched_plot_df <- function(gene_of_interest, exp_data, meta, nano_gene) {
   if (nano_gene) {
 	mat_list <- list(exp_data$Manso, exp_data$James, exp_data$Bitler, 
-                 exp_data$EGA, exp_data$Jav, exp_data$Adzib)
+                 exp_data$EGA, exp_data$Jav, exp_data$Adzib, exp_data$Jim)
 	names(mat_list) <- c("Nano\nManso", "Nano\nJames", "Nano\nBitler", 
-                     "RNAseq\nEGA", "RNAseq\nJav", "RNAseq\nAdzib")
+                     "RNAseq\nEGA", "RNAseq\nJav", "RNAseq\nAdzib", "Microarray\nJimSanchez")
 } else {
-	mat_list <- list(exp_data$EGA, exp_data$Jav, exp_data$Adzib)
-	names(mat_list) <- c("RNAseq\nEGA", "RNAseq\nJav", "RNAseq\nAdzib")
+	mat_list <- list(exp_data$EGA, exp_data$Jav, exp_data$Adzib, exp_data$Jim)
+	names(mat_list) <- c("RNAseq\nEGA", "RNAseq\nJav", "RNAseq\nAdzib", "Microarray\nJimSanchez")
 }
 	
 
@@ -44,6 +45,7 @@ get_matched_plot_df <- function(gene_of_interest, exp_data, meta, nano_gene) {
 
   plot_df$Assay <- "Nano"
  plot_df[plot_df$Experiment %in% c("RNAseq\nAdzib", "RNAseq\nEGA", "RNAseq\nJav"),]$Assay <- "RNAseq"
+ plot_df[plot_df$Experiment %in% c("Microarray\nJimSanchez"),]$Assay <- "Microarray"
 
   return(plot_df)
 }
