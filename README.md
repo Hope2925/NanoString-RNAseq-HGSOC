@@ -21,7 +21,8 @@ Additional information is available in the READMEs within each folder
     * Gene networks (hdWGCNA & WGCNA)
 
 ## Gene-explorer Application
-* Code and details for the application to explore data is found in `hgsoc-gene-explorer`
+* You can access our portal most easily at [https://hopetownsend.shinyapps.io/hgsoc-gene-explorer/](https://hopetownsend.shinyapps.io/hgsoc-gene-explorer/).
+* Code and details for running the application locally are found in `hgsoc-gene-explorer`
 
 ## Citation
 Please cite X

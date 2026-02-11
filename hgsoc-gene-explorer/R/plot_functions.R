@@ -9,7 +9,10 @@ library(colorRamp2)
 color_dict = list("Nano\nManso"="#FDAE6B", "Nano\nJames"="#D94801", "Nano\nBitler"="#7F2704",
         "RNAseq\nAdzib"="#3f007d", "RNAseq\nJav"="#bcbddc", "RNAseq\nEGA"="#807dba",
         "Microarray\nJimSanchez"="gold",
-        "PFS>12"="#008B45", "PFS<=12"="grey"   
+        "Nano Manso"="#FDAE6B", "Nano James"="#D94801", "Nano Bitler"="#7F2704",
+        "RNAseq Adzib"="#3f007d", "RNAseq Jav"="#bcbddc", "RNAseq EGA"="#807dba",
+        "Microarray JimSanchez"="gold",
+        "PFS>12"="#008B45", "PFS<=12"="grey"
 )
 
 
@@ -28,10 +31,10 @@ p <- ggplot(plot_df, aes(x = factor(Graphing_Time, levels=c("Pre", "Post", "Pre_
        y = "Expression", x = "Time", color="PFS") +
     scale_color_manual(values=c(">12mth"="springgreen4", "<=12mth"="grey")) +
     # ["RNAseq_A", "RNAseq_J", "RNAseq_EGA", "Nano_M", "Nano_B", "Nano_J"]
-  theme_bw(base_size = 20) + facet_wrap(~factor(Experiment, levels=c("RNAseq\nAdzib", "RNAseq\nJav", "RNAseq\nEGA", 
-                                                                     "Nano\nManso", "Nano\nBitler", "Nano\nJames" , 
-                                                                     "Microarray\nJimSanchez"
-                                                                     )), scale="free_y", nrow=2)
+  theme_bw(base_size = 20) + facet_wrap(~factor(Experiment, levels=c("RNAseq Adzib", "RNAseq Jav", "RNAseq EGA", 
+                                                                     "Nano Manso", "Nano Bitler", "Nano James" , 
+                                                                     "Microarray JimSanchez"
+                                                                     )), scale="free_y", nrow=3)
 
 print(p)
     }
@@ -62,12 +65,7 @@ plot_exp_corr_PFS <- function(gene_of_interest, plot_df) {
 ######################
 #### L2FC ############
 ######################
-plot_l2fc <- function(gene_of_interest, full_l2fc, nano_gene) {
-	plot_l2fc_df = full_l2fc[,c("Experiment", "PFS_mths", "PFS_bool", gene_of_interest)]
-	colnames(plot_l2fc_df) <- c("Experiment", "PFS_mths", "PFS_bool", "Gene")
-	if (!nano_gene) {
-	plot_l2fc_df = plot_l2fc_df[plot_l2fc_df$Experiment %in% c("RNAseq\nEGA", "RNAseq\nJav", "RNAseq\nAdzib"),]
-	}
+plot_l2fc <- function(gene_of_interest, plot_l2fc_df) {
   # get the Microarray data
   plot_l2fc_micro_df = plot_l2fc_df[plot_l2fc_df$Experiment %in% c("Microarray\nJimSanchez"),]
   plot_l2fc_df = plot_l2fc_df[!plot_l2fc_df$Experiment %in% c("Microarray\nJimSanchez"),]
@@ -153,19 +151,13 @@ plot_l2fc <- function(gene_of_interest, full_l2fc, nano_gene) {
 ))
 }
 
-plot_l2fc_corr_PFS <- function(gene_of_interest, full_l2fc, nano_gene) {
-  plot_l2fc_df = full_l2fc[,c("Experiment", "PFS_mths", "PFS_bool", gene_of_interest)]
-	colnames(plot_l2fc_df) <- c("Experiment", "PFS_mths", "PFS_bool", "Gene")
-	if (!nano_gene) {
-	plot_l2fc_df = plot_l2fc_df[plot_l2fc_df$Experiment %in% c("RNAseq\nEGA", "RNAseq\nJav", "RNAseq\nAdzib"),]
-	}
-  plot_l2fc_df$log10_PFS_mths = log10(plot_l2fc_df$PFS_mths+0.5)
+plot_l2fc_corr_PFS <- function(gene_of_interest, plot_l2fc_df) {
   # get the Microarray data
   plot_l2fc_micro_df = plot_l2fc_df[plot_l2fc_df$Experiment %in% c("Microarray\nJimSanchez"),]
   plot_l2fc_df = plot_l2fc_df[!plot_l2fc_df$Experiment %in% c("Microarray\nJimSanchez"),]
   # All the data
   p1 <- ggplot(plot_l2fc_df, aes(x=Gene, y=log10_PFS_mths)) + 
-  geom_point(aes(color=Experiment)) + theme_bw(base_size=20) + 
+  geom_point(aes(color=Experiment)) + theme_bw(base_size=17) + 
   labs(x=paste(gene_of_interest, " Log2FC"), y="log10(PFS+0.5)") + #facet_wrap(~Assay, scales="free_x") + 
   geom_hline(yintercept=log10(12.01)) + geom_vline(xintercept=log2(1)) + scale_color_manual(values=color_dict) + 
   geom_smooth(method = "lm", se = TRUE, color = "black") +
@@ -173,7 +165,7 @@ plot_l2fc_corr_PFS <- function(gene_of_interest, full_l2fc, nano_gene) {
                               label.x = min(plot_l2fc_df$Gene), label.y = -0.5, size=6)  
 
   p1_micro <- ggplot(plot_l2fc_micro_df, aes(x=Gene, y=log10_PFS_mths)) + 
-  geom_point(aes(color=Experiment)) + theme_bw(base_size=20) + 
+  geom_point(aes(color=Experiment)) + theme_bw(base_size=16) + 
   labs(x=paste(gene_of_interest, " Log2FC"), y="log10(PFS+0.5)") + #facet_wrap(~Assay, scales="free_x") + 
   geom_hline(yintercept=log10(12.01)) + geom_vline(xintercept=log2(1)) + scale_color_manual(values=color_dict) + 
   geom_smooth(method = "lm", se = TRUE, color = "black") +
@@ -280,7 +272,7 @@ plot_gene_scatter_main <- function(gene, df_list, ref_df, outlier_sd = 2) {
 #########################
 
 graph_gene_prepost_heatmap <- function(
-    dfs, # should have full, pre, post with rownames=genes, and colnames=ct in ct_order
+    gene_mat, # should have full, pre, post with rownames=genes, and colnames=ct in ct_order
     gene,
     ct_order = c("All", "EOC_C1", "EOC_C2", "EOC_C3", "EOC_C4", "EOC_C5", "EOC_C6", "EOC_C7", "EOC_C8", "EOC_C9", 
 "EOC_C10", "EOC_C11", "EOC_C12", 
@@ -290,34 +282,6 @@ graph_gene_prepost_heatmap <- function(
 "B-cells", "Plasma-cells", "T-cells", "NK", 
 "ILC", "Mast-cells", "pDC", "DC-1", "DC-2", "Macrophages")
 ) {
-
-    # CHECKS
-    missing <- sapply(dfs, function(df) !(gene %in% rownames(df)))
-    if (any(missing)) {
-        stop(
-            "Gene missing in: ",
-            paste(names(missing)[missing], collapse = ", ")
-        )
-    }
-
-    # Get in proper order
-    dfs <- lapply(dfs, function(df) {
-        mat <- as.matrix(df)
-
-        if (!is.null(ct_order)) {
-            mat <- mat[, ct_order, drop = FALSE]
-        }
-
-        mat
-    })
-
-    ## EXTRACT GENE
-    gene_mat <- do.call(
-        rbind,
-        lapply(dfs, function(mat) mat[gene, , drop = FALSE])
-    )
-
-    rownames(gene_mat) <- names(dfs)
 
     ## COLOR FUNCTION
 		col_fun <- colorRamp2(

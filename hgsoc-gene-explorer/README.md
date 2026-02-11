@@ -11,9 +11,9 @@ WARNINGS:
 
 ### Prepare the image
 #### Download from Dockerhub
-1. Pull the latest image from Dockerhub: `docker pull hope2925/gene-explorer`
+1. Pull the most recent versioned image from Dockerhub (e.g. v2): `docker pull hope2925/gene-explorer`
 
-#### Build the image again
+#### OR Rebuild the image again
 1. Clone this repo: `git clone https://github.com/Hope2925/NanoString-RNAseq-HGSOC.git` and go into the appropriate directory
 `cd NanoString-RNAseq-HGSOC/hgsoc-gene-explorer/`
 2. Build the image with docker: `docker build -t gene-explorer .`

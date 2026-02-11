@@ -23,10 +23,11 @@ RUN apt-get update && apt-get install -y \
 
 
 
-# Install ggpubr first since it was causing problems
+# Install problem packages first
 RUN R -e "install.packages('ggpubr', repos='https://cloud.r-project.org'); sessionInfo()"
+RUN R -e "install.packages('BiocManager'); BiocManager::install('ComplexHeatmap'); sessionInfo()"
 # Install the necessary R package dependencies
-RUN R -e "install.packages(c('shiny', 'shinycssloaders', 'here', 'dplyr', 'data.table', 'ggplot2', 'cowplot', 'ggrepel', 'patchwork', 'ComplexHeatmap', 'colorRamp2'), repos='https://cloud.r-project.org')"
+RUN R -e "install.packages(c('shiny', 'shinycssloaders', 'here', 'dplyr', 'data.table', 'ggplot2', 'cowplot', 'ggrepel', 'patchwork', 'colorRamp2'), repos='https://cloud.r-project.org')"
 
 # Copy this app to the Shiny Server directory
 COPY . /home/shiny-app/
