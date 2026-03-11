@@ -70,7 +70,7 @@ ui <- fluidPage(
         p("This meta-cohort includes data from 7 studies with paired transcriptomics data pre and post NACT treatment along with Platinum Free Survival (PFS). The studies include:"),
         p(HTML("Cohort Table:")),
         imageOutput("cohort_img"),
-        #tags$img(src = "Cohort_Table.png", width = "80%"),
+        #tags$img(src = "Cohort_Table_2.png", width = "70%"),
         #HTML('<img src="Cohort_Table.png"/>'),
         # height="100px" width="100px"
         #tags$img(src = "Cohort_Table.png", 
@@ -183,14 +183,14 @@ server <- function(input, output, session) {
   # Image output since for some reason the imageOutput in the UI wasn't working with the tags$img approach
    output$cohort_img <- renderImage({
     if (testing) {
-      file_path <- normalizePath("hgsoc-gene-explorer/www/Cohort_Table.png")  # absolute path
+      file_path <- normalizePath("hgsoc-gene-explorer/www/Cohort_Table_2.png")  # absolute path
     } else {
-      file_path <- normalizePath("www/Cohort_Table.png")  # absolute path
+      file_path <- normalizePath("www/Cohort_Table_2.png")  # absolute path
     }
     list(
       src = file_path,
       contentType = "image/png",
-      width = 800,
+      width = 600,
       alt = "Cohort Table"
     )
   }, deleteFile = FALSE)
