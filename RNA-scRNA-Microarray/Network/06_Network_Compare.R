@@ -71,7 +71,7 @@ genes_of_interest = c("IDO1", "CD40", "JAK2", "CTSS", "ALDOC", "TMUB2", "ID4", "
               "RRM2", "GBP4", "AMOTL2", "ESYT3", "HCN3", "DDX11", "GPR173", "CLK2", "CDKL2", "SHROOM1", "CD274")
 length(genes_of_interest)
 
-genen_dir <- "/scratch/Shares/clauset/Clauset_ABNexus/WGCNA/gene_networks"
+genen_dir <- "../results/gene_networks"
 TOM_pre1 <- readRDS(file.path(genen_dir, "TOM_filt1_PRE.tsv"))
 TOM_pre2 <- readRDS(file.path(genen_dir, "TOM_filt2_PRE.tsv"))
 dim(TOM_pre1)

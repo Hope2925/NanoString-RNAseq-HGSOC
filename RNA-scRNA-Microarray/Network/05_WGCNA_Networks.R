@@ -42,7 +42,7 @@ length(gene_list)
 #### 1. Load and merge RNA-seq datasets ####
 ######################################################################
 timing = "POST"
-datExpr_bulk <- readRDS(paste0("/scratch/Shares/clauset/Clauset_ABNexus/WGCNA/counts/WGCNA_", timing, "_Bulk_VST_data.rds"))
+datExpr_bulk <- readRDS(paste0("./TOMs/WGCNA_Bulk/WGCNA_", timing, "_Bulk_VST_data.rds"))
 dim(datExpr_bulk)
 
 
@@ -248,7 +248,7 @@ module_summary
 #### 5. Explore gene networks of model genes for cytoscape
 ###################################################################
 # create output directory
-genen_dir <- "/scratch/Shares/clauset/Clauset_ABNexus/WGCNA/gene_networks"
+genen_dir <- "../results/gene_networks"
 dir.create(genen_dir, showWarnings = FALSE)
 
 build_gene_network_from_TOM <- function(
@@ -465,14 +465,14 @@ gene_functional_annotation <- list(
   
 )
 
-edge_df <- data.table::fread("/scratch/Shares/clauset/Clauset_ABNexus/WGCNA/gene_networks/POST_FULL_edges.tsv")
+edge_df <- data.table::fread("../results/gene_networks/POST_FULL_edges.tsv")
 edge_df[1:2,]
 dim(edge_df)
 edge_df <- edge_df[(edge_df$From %in% gene_list) | (edge_df$To %in% gene_list),]
 dim(edge_df)
 edge_df[1:2,]
-write.table(edge_df, "/scratch/Shares/clauset/Clauset_ABNexus/WGCNA/gene_networks/POST_FULL_FILT_edges.tsv", row.names=FALSE, quote=FALSE, sep="\t")
-node_df <- data.table::fread("~/POST_FULL_nodes.tsv", fill=TRUE)
+write.table(edge_df, "../results/gene_networks/POST_FULL_FILT_edges.tsv", row.names=FALSE, quote=FALSE, sep="\t")
+node_df <- data.table::fread("../results/gene_networks/POST_FULL_nodes.tsv", fill=TRUE)
 node_df[1:2,]
 node_df$Model_Gene <- FALSE
 node_df[node_df$Gene %in% gene_list,]$Model_Gene <- TRUE
@@ -498,7 +498,7 @@ for (gene in node_df$Gene) {
 node_df$Category <- cat_gene_list
 node_df[1:2,]
 table(node_df$Category)
-write.table(node_df, "/scratch/Shares/clauset/Clauset_ABNexus/WGCNA/gene_networks/POST_FULL_nodes.tsv", row.names=FALSE, quote=FALSE, sep="\t")
+write.table(node_df, "../results/gene_networks/POST_FULL_nodes.tsv", row.names=FALSE, quote=FALSE, sep="\t")
 
 
 
