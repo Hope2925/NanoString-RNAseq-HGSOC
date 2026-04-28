@@ -1,0 +1,399 @@
+Gene	Category
+ALDOC	
+NORAD	
+PSMA3-AS1	
+OIP5-AS1	
+SNHG29	
+EBLN3P	
+LIMD1-AS1	
+ELOA-AS1	
+HCG18	
+NIPBL-DT	
+TUG1	
+RN7SK	
+TP73-AS1	
+THUMPD3-AS1	
+ZNF271P	
+FGD5-AS1	
+ZNF45-AS1	
+ZFAS1	
+ERVK3-1	
+GTF2IRD1P1	
+SNHG1	
+GABPB1-IT1	
+SNHG10	
+SNHG8	
+SCARNA7	
+EPB41L4A-AS1	
+MIR10399	
+SCARNA13	
+SCARNA10	
+CHASERR	
+WAC-AS1	
+ID4	
+KMT2E-AS1	
+GARS1-DT	
+GABPB1-AS1	
+PNISR-AS1	
+HERPUD2-AS1	
+BAZ2B-AS1	
+CHROMR	
+POLR1HASP	
+PPP4R1L	
+EIF3J-DT	
+CERS6-AS1	
+UBA6-DT	
+CAMSAP1-DT	
+RIPK2-DT	
+ZNF892	
+ESYT3	
+RN7SL1	
+VASH1-AS1	
+RN7SL2	
+RN7SL3	
+COX10-DT	
+BAIAP2-DT	
+AFG3L1P	
+ZNF407-AS1	
+CTBP1-DT	
+MIATNB	
+HEIH	
+JPX	
+RBM25-AS1	
+TCF12-DT	
+HCG11	
+CD63-AS1	
+HCN3	
+MIR10393	
+OTUD6B-AS1	
+SYNJ2BP	
+ARPP19	
+SLC30A4-AS1	
+SLC12A2-DT	
+FCF1P2	
+ZNF561-AS1	
+SYNDIG1L	
+B3GALT9	
+HAPSTR1	
+MIR12127	
+ZNF252P	
+UFM1	
+DDX11	
+STARD7-AS1	
+ARRDC1-AS1	
+SCARNA12	
+SCARNA2	
+SNHG30	
+SNHG11	
+SLC9A3-OT1	
+GATD1-DT	
+CENPBD2P	
+C2orf74-AS1	
+TMEM250	
+GNRHR2	
+CLUHP3	
+ARRDC3-AS1	
+SNHG17	
+B3GALT6	
+SNHG15	
+SNHG25	
+FLJ13224	
+ZNF503-AS2	
+SNHG19	
+SMIM15-AS1	
+MIR4741	
+AATBC	
+CLK2	
+SHROOM1	
+GMFB	
+TNRC18	
+SF3A2	
+PRR12	
+NCOR2	
+HCFC1	
+ZNF335	
+MRPL42	
+BICRA	
+REXO1	
+LYRM2	
+MTPN	
+NPEPL1	
+UBE2W	
+PRRC2A	
+RTEL1	
+BCL9L	
+SETD1A	
+SOCS4	
+CRIPT	
+ARL5A	
+CGGBP1	
+KMT2D	
+TRAPPC6B	
+TMEM167A	
+ZC3H18	
+PPDPF	
+IDO1	Leuk cell-cell adhesion
+SLAMF6	T cell activation|Type II IFN|Immune Response|Lymph/Leuk activation
+GPR174	
+SH2D1A	
+CCR2	T cell activation|Type II IFN|Leuk cell-cell adhesion
+CD48	
+CD53	
+CD3G	T cell activation
+TIGIT	T cell activation|Leuk cell-cell adhesion
+SLAMF7	
+CCR5	
+SNX20	
+IKZF1	
+SLFN12L	
+LAX1	Leuk cell-cell adhesion
+CYTIP	
+P2RY10	
+GZMA	Immune Response
+SASH3	T cell activation|Type II IFN|Immune Response|TNF cytokine prod|Lymph/Leuk activation|Leuk cell-cell adhesion
+THEMIS	T cell activation
+CD3D	Lymph/Leuk activation
+CCL5	Type II IFN|Immune Response|Lymph/Leuk activation|Leuk cell-cell adhesion
+IGKV3-11	
+SLA	
+TFEC	
+ICOS	Leuk cell-cell adhesion
+IL10RA	Immune Response
+AOAH	
+MPEG1	
+KLHL6	
+CD96	Immune Response|Lymph/Leuk activation
+CD40	Lymph/Leuk activation
+ITGAL	Lymph/Leuk activation
+ITK	Lymph/Leuk activation
+RCSD1	
+DOCK2	Lymph/Leuk activation
+ZNF831	
+GRAP2	
+GZMK	
+LY9	Lymph/Leuk activation
+BIN2	
+JAML	T cell activation
+TAGAP	
+PIK3CG	Lymph/Leuk activation
+SLAMF1	Lymph/Leuk activation
+GIMAP5	
+ANKRD44	
+GIMAP1-GIMAP5	
+CD2	Lymph/Leuk activation
+TRAT1	Lymph/Leuk activation
+JAK2	
+KLHDC1	
+LYST	
+ABCA6	
+HERC3	
+CPED1	
+ABCA9	
+GANC	
+AHCY	
+PPP3CC	
+GPRASP1	
+SAPCD2	
+DOLPP1	
+SMARCA2	
+EIF6	
+LRRC70	
+GAB1	
+ABCA10	
+MOCS3	
+SPC24	
+STIM2	
+ARHGAP10	
+POMK	
+FKBPL	
+FEN1	
+LSM4	
+PARS2	
+TARBP2	
+SLC38A11	
+PNRC1	
+TPI1	
+CTSS	Immune Response
+NCKAP1L	Immune Response
+TMIGD3	
+CD300A	
+VSIG4	
+HAVCR2	Immune Response|TNF cytokine prod
+PLEK	
+ADORA3	
+LAPTM5	Immune Response
+LY86	
+LYZ	
+CCR1	
+GMFG	
+LILRB1	Immune Response|TNF cytokine prod
+C3AR1	
+FCER1G	
+LILRB4	Immune Response|TNF cytokine prod
+LAIR1	
+CD4	Immune Response
+CD86	Immune Response|TNF cytokine prod
+TREM2	
+TMUB2	proteasome
+ABHD17A	
+TP53I13	
+MBD3	
+CSNK1G2	
+NDUFS7	
+JOSD2	
+TMEM259	proteasome
+SLC39A13	
+MIR6084	
+POLR2E	
+TPGS1	
+BRAT1	
+RNH1	
+SMARCA5-AS1	
+AMDHD2	
+SIRT6	proteasome
+DGKQ	
+E4F1	
+MADCAM1-AS1	
+CAPN15	
+ADAT3	
+MPG	
+LMF2	
+MFSD12	
+APBA3	
+ANTKMT	
+SCO2	
+FBXL15	proteasome
+CACTIN-AS1	
+FLYWCH1	
+ENO1	muscle contraction
+ABCA9-AS1	
+GNA14	
+LAMA2	muscle structure
+ITPR1	
+SYNE1	muscle structure
+MYH11	muscle structure|muscle contraction
+BIRC5	
+SYNPO2	
+CDCA5	
+IHO1	
+ZWINT	
+LMOD1	muscle structure|muscle contraction
+STAT5B	
+MROH2B	
+GINS1	
+FAM13C	
+ZBTB20-AS1	
+ARHGAP6	
+DMD	muscle structure|muscle contraction
+KIAA1755	
+SMIM9	
+GSTM5	
+EGR1	muscle structure
+ABCA8	
+ABI3BP	
+SYNE1-AS1	
+TSPYL2	
+OAS3	Immune Response|TNF cytokine prod
+MX1	
+PIK3R5	
+ITGB2	Immune Response
+OAS2	TNF cytokine prod
+CD84	
+LST1	
+RRM2	Cell cycle
+TOP2A	
+NUF2	Cell cycle
+DEPDC1	
+KIF2C	Cell cycle
+KIF14	Cell cycle
+BUB1	Cell cycle
+KIF11	Cell cycle
+MELK	Cell cycle
+MCM10	
+HJURP	
+PTTG1	
+SHCBP1	
+EXO1	
+NEK2	Cell cycle
+RACGAP1	Cell cycle
+TPRG1L	
+DLGAP5	Cell cycle
+FANCI	
+CCNB2	Cell cycle
+ARHGAP11A	
+CEP55	Cell cycle
+CCNB1	Cell cycle
+LMNB1	
+KNL1	Cell cycle
+KIF4A	Cell cycle
+BUB1B	Cell cycle
+CKAP2L	
+KIF20A	Cell cycle
+NCAPG	Cell cycle
+KIF15	Cell cycle
+GBP4	Type II IFN|Immune Response
+AMOTL2	
+IRF2BP1	
+MZT2B	
+TMEM160	
+BBLN	
+TBL3	
+AP5Z1	
+RHOT2	
+SPPL2B	
+GUK1	
+TMEM115	
+REX1BD	
+GPR173	Response to nitrogen or hormone
+CHTF18	
+PICALM	
+AZI2	
+FBXL5	
+USP15	
+WASHC4	
+STAM2	
+C1orf159	
+MIER1	
+CALCOCO2	
+SHOC2	Response to nitrogen or hormone
+PPP1R26	
+OSBPL8	Response to nitrogen or hormone
+KMT5C	
+WDR90	
+POLK	
+PJA2	
+TBK1	
+RAP1A	Response to nitrogen or hormone
+TMEM201	
+SPHK2	
+FAM114A2	
+AGRN	Response to nitrogen or hormone
+WDR24	
+FEZ2	
+TELO2	
+POLD1	
+MCM2	
+PIGQ	
+CDKL2	
+COPE	
+ZNF787	
+ISOC2	
+NOSIP	
+GRWD1	
+SENP7	
+ALDH16A1	
+SAC3D1	
+NDUFB2-AS1	
+MRPS12	
+ZDHHC12	
+IKZF5	
+TBCK	
+IDH2-DT	
+NEK1	
+TSEN34	
+CD274	T cell activation|Type II IFN
+TNFSF8	T cell activation
+KLRK1	T cell activation|Type II IFN
+KLRD1	
+KLRC4-KLRK1	T cell activation|Type II IFN
+KCNA3	

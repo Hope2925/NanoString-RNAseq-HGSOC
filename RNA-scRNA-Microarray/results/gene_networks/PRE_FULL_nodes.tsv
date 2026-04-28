@@ -1,0 +1,358 @@
+Gene	Category	Model_Gene
+ALDOC	Epithelial differentiation|nucleobase-catabolism	TRUE
+FGD5-AS1	None	FALSE
+ELOA-AS1	None	FALSE
+THUMPD3-AS1	None	FALSE
+NORAD	nucleobase-catabolism	FALSE
+LIMD1-AS1	None	FALSE
+SNHG29	None	FALSE
+SNHG1	None	FALSE
+SCARNA10	None	FALSE
+RCC2-AS1	None	FALSE
+PSMA3-AS1	None	FALSE
+OIP5-AS1	nucleobase-catabolism	FALSE
+EBLN3P	None	FALSE
+ZNF271P	None	FALSE
+RN7SK	None	FALSE
+ERVK3-1	None	FALSE
+GTF2IRD1P1	None	FALSE
+SCARNA7	None	FALSE
+ZFAS1	None	FALSE
+SNHG3	None	FALSE
+SNHG10	None	FALSE
+TUG1	None	FALSE
+ZNF407-AS1	None	FALSE
+SNHG12	None	FALSE
+NRAV	None	FALSE
+SFT2D3	None	FALSE
+NNT-AS1	None	FALSE
+DLEU2	None	FALSE
+SCARNA13	None	FALSE
+MLF1-DT	None	FALSE
+SNHG8	None	FALSE
+ID4	None	TRUE
+GABPB1-IT1	None	FALSE
+HCG18	None	FALSE
+WAC-AS1	None	FALSE
+NIPBL-DT	None	FALSE
+CHASERR	None	FALSE
+HERPUD2-AS1	None	FALSE
+PNISR-AS1	None	FALSE
+BAZ2B-AS1	None	FALSE
+RAB33B-AS1	None	FALSE
+KMT2E-AS1	None	FALSE
+GABPB1-AS1	None	FALSE
+HCG11	None	FALSE
+DKFZP586I1420	None	FALSE
+POLR1HASP	None	FALSE
+SCAND2P	None	FALSE
+CERS6-AS1	None	FALSE
+MIR4453HG	None	FALSE
+LCDR	None	FALSE
+EIF3J-DT	None	FALSE
+ENO1	nucleobase-catabolism	TRUE
+TP73-AS1	None	FALSE
+ZFAND2A-DT	None	FALSE
+OSER1-DT	None	FALSE
+IPO5P1	None	FALSE
+EGR1	None	TRUE
+ESYT3	None	TRUE
+RN7SL1	None	FALSE
+SNHG16	None	FALSE
+CLK2	None	TRUE
+GARS1-DT	None	FALSE
+UBA6-DT	None	FALSE
+RIPK2-DT	None	FALSE
+STARD4-AS1	None	FALSE
+MIR12127	None	FALSE
+SLC12A2-DT	None	FALSE
+N4BP2L2-IT2	None	FALSE
+MIR10393	None	FALSE
+SHROOM1	None	TRUE
+SYNJ2BP	None	FALSE
+ARPP19	None	FALSE
+OTUD6B-AS1	None	FALSE
+FCF1P2	None	FALSE
+LYRM2	None	FALSE
+TMEM167A	None	FALSE
+PDCD6IP-DT	None	FALSE
+SYNDIG1L	None	FALSE
+SP2-AS1	None	FALSE
+UFM1	None	FALSE
+GMFB	None	FALSE
+DLEU1	None	FALSE
+SLC30A4-AS1	None	FALSE
+ZNF252P	None	FALSE
+CIZ1	None	FALSE
+MIR3916	None	FALSE
+THAP9-AS1	None	FALSE
+MTPN	None	FALSE
+IDO1	Immune Process|Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation	TRUE
+STAM2	None	FALSE
+LRWD1	None	FALSE
+AIM2	Immune Process	FALSE
+MIB2	None	FALSE
+C1orf35	None	FALSE
+ATAD3A	DNA damage	FALSE
+H1-10	None	FALSE
+TNFSF13B	Immune Process|Lymph/Leuk Activation	FALSE
+TMEM201	None	FALSE
+KRBA1	None	FALSE
+RBM10	None	FALSE
+BRF1	None	FALSE
+MARCHF1	None	FALSE
+CROCC	None	FALSE
+ABHD8	None	FALSE
+SMPD4	None	FALSE
+ZNF408	None	FALSE
+ZGPAT	None	FALSE
+LY96	Immune Process|TNF cytokine	FALSE
+ZNF282	None	FALSE
+WRAP73	None	FALSE
+POLD1	DNA damage	FALSE
+ACOT7	None	FALSE
+TFEC	None	FALSE
+RALY	None	FALSE
+GLRX	None	FALSE
+PAXX	None	FALSE
+CASP1	Immune Process	FALSE
+THOP1	None	FALSE
+PANK4	None	FALSE
+CD40	Immune Process|Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation	TRUE
+AOAH	None	FALSE
+ANKRD44	None	FALSE
+CYTIP	None	FALSE
+GIMAP8	None	FALSE
+IL10RA	Immune Process|TNF cytokine	FALSE
+DOCK2	Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation	FALSE
+PIK3CG	Immune Process|Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation	FALSE
+KCNA3	None	FALSE
+GIMAP5	None	FALSE
+FLI1	None	FALSE
+KLHL6	Immune Process	FALSE
+GIMAP1-GIMAP5	None	FALSE
+NCKAP1L	Immune Process|Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation	FALSE
+ITK	Lymph/Leuk Activation	FALSE
+SLAMF6	Immune Process|Lymph/Leuk Activation|TNF cytokine	FALSE
+CD96	None	FALSE
+CCR5	Immune Process|TNF cytokine	FALSE
+ITGAL	Lymph/Leuk Activation	FALSE
+BIN2	None	FALSE
+LILRB1	Immune Process|Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation|TNF cytokine	FALSE
+JAML	Lymph/Leuk Activation	FALSE
+PTPRC	Immune Process|Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation|TNF cytokine	FALSE
+ARHGAP15	None	FALSE
+WIPF1	None	FALSE
+INSYN2B	None	FALSE
+CD2	Lymph/Leuk Activation	FALSE
+SLFN12L	None	FALSE
+CSF2RB	Immune Process|Lymph/Leuk/Mono/Mye proliferation|TNF cytokine	FALSE
+PRKCB	Lymph/Leuk Activation	FALSE
+IKZF1	Lymph/Leuk Activation	FALSE
+JAK2	Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation|TNF cytokine	TRUE
+DPYD	None	FALSE
+PTPN22	Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation|TNF cytokine	FALSE
+TLR4	Immune Process|Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation|TNF cytokine	FALSE
+SAC3D1	None	FALSE
+ARHGEF6	None	FALSE
+SLC9A9	None	FALSE
+FGL2	Lymph/Leuk Activation	FALSE
+DAB2	None	FALSE
+FYB1	None	FALSE
+MCM2	None	FALSE
+ARHGAP18	None	FALSE
+GIMAP2	None	FALSE
+BTK	Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation|TNF cytokine	FALSE
+SAMSN1	Lymph/Leuk Activation	FALSE
+GIMAP4	None	FALSE
+LCP2	Lymph/Leuk/Mono/Mye proliferation	FALSE
+EVI2A	None	FALSE
+CTSS	Immune Process	TRUE
+PLEK	None	FALSE
+CD300A	Immune Process	FALSE
+CCL4	None	FALSE
+CCR1	None	FALSE
+CD48	None	FALSE
+HAVCR2	Immune Process	FALSE
+VSIG4	Immune Process	FALSE
+LAPTM5	Immune Process	FALSE
+LST1	None	FALSE
+CD28	Immune Process	FALSE
+GMFG	None	FALSE
+IFI30	None	FALSE
+CD52	None	FALSE
+CCRL2	None	FALSE
+CD53	None	FALSE
+FPR1	Immune Process	FALSE
+SRGN	None	FALSE
+BCL2A1	None	FALSE
+SLC2A5	None	FALSE
+TLR2	Immune Process	FALSE
+FCER1G	Immune Process	FALSE
+CD33	Immune Process	FALSE
+CLEC7A	Immune Process|Lymph/Leuk Activation	FALSE
+FCGR3A	Immune Process	FALSE
+CRTAM	Immune Process	FALSE
+ARHGDIB	None	FALSE
+C3AR1	Immune Process	FALSE
+LAIR1	Immune Process	FALSE
+MPEG1	Immune Process	FALSE
+AIF1	None	FALSE
+TMUB2	None	TRUE
+TMEM259	None	FALSE
+ARSA	None	FALSE
+ZNF668	None	FALSE
+AP5Z1	DNA damage	FALSE
+SCAMP4	None	FALSE
+CHPF	None	FALSE
+TP53I13	None	FALSE
+CSNK1G2	None	FALSE
+JOSD2	None	FALSE
+PKD1	None	FALSE
+LMF2	None	FALSE
+ACADS	None	FALSE
+SIRT6	DNA damage	FALSE
+MIR6084	None	FALSE
+STK11	None	FALSE
+BCAR1	None	FALSE
+EGFL7	None	FALSE
+MADCAM1-AS1	None	FALSE
+DGKQ	None	FALSE
+SLC38A10	None	FALSE
+TPGS1	None	FALSE
+TECPR1	None	FALSE
+BTBD2	None	FALSE
+LLGL1	None	FALSE
+FBXW5	None	FALSE
+CORO7	None	FALSE
+SMARCA5-AS1	None	FALSE
+FLYWCH1	None	FALSE
+ARHGAP45	None	FALSE
+SBF1	None	FALSE
+OAS3	Immune Process|TNF cytokine	TRUE
+SNX20	None	FALSE
+CCR2	Immune Process|Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation|TNF cytokine	FALSE
+SASH3	Immune Process|Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation|TNF cytokine	FALSE
+CCL5	Immune Process|Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation|TNF cytokine	FALSE
+SLA	None	FALSE
+CD38	Immune Process	FALSE
+GIMAP1	None	FALSE
+IL21R	TNF cytokine	FALSE
+SLAMF7	None	FALSE
+SP140	None	FALSE
+GPR174	TNF cytokine	FALSE
+LILRB4	Immune Process|TNF cytokine	FALSE
+TIGIT	Lymph/Leuk Activation|TNF cytokine	FALSE
+RRM2	Mitosis	TRUE
+USP1	None	FALSE
+NUF2	Mitosis	FALSE
+DEPDC1	None	FALSE
+KIF11	Mitosis	FALSE
+DBF4	Mitosis	FALSE
+CCNA2	Mitosis	FALSE
+RACGAP1	Mitosis	FALSE
+CDK1	Mitosis	FALSE
+CDKN3	Mitosis	FALSE
+UBE2T	None	FALSE
+PTTG1	None	FALSE
+TTK	Mitosis	FALSE
+SCARF1	None	FALSE
+CCNB1	Mitosis	FALSE
+CKAP2	Mitosis	FALSE
+NCAPG	Mitosis	FALSE
+NEK2	Mitosis	FALSE
+TOP2A	None	FALSE
+CENPQ	None	FALSE
+IFFO1	None	FALSE
+NUSAP1	Mitosis	FALSE
+MRPL39	None	FALSE
+SSX2IP	None	FALSE
+CEP55	Mitosis	FALSE
+EXO1	None	FALSE
+CSE1L	None	FALSE
+KIF15	Mitosis	FALSE
+STARD8	None	FALSE
+DLGAP5	Mitosis	FALSE
+VRK1	Mitosis	FALSE
+GBP4	Immune Process	TRUE
+KYNU	None	FALSE
+PDCD1LG2	Lymph/Leuk Activation	FALSE
+TLR1	Immune Process	FALSE
+CD86	Immune Process|Lymph/Leuk Activation|Lymph/Leuk/Mono/Mye proliferation	FALSE
+AMOTL2	None	TRUE
+LIME1	None	FALSE
+CTBP1-AS	None	FALSE
+RABEP2	None	FALSE
+MZT2B	None	FALSE
+SPNS1	None	FALSE
+MAP2K2	None	FALSE
+DGKZ	None	FALSE
+MBD3	None	FALSE
+TELO2	DNA damage	FALSE
+E4F1	None	FALSE
+GNB2	None	FALSE
+NELFB	None	FALSE
+ATP13A2	None	FALSE
+DVL1	None	FALSE
+PEX16	None	FALSE
+BRAT1	DNA damage	FALSE
+HCN3	None	TRUE
+PIDD1	DNA damage	FALSE
+INTS1	None	FALSE
+SLX9	None	FALSE
+ZNF598	None	FALSE
+FAAP20	None	FALSE
+ZBTB48	None	FALSE
+INTS11	None	FALSE
+CHTF18	None	FALSE
+DDX11	DNA damage	TRUE
+IRF2BP1	None	FALSE
+ALDH16A1	None	FALSE
+KMT5C	DNA damage	FALSE
+UPF1	DNA damage	FALSE
+TBL3	None	FALSE
+ARMC5	None	FALSE
+NSUN5	None	FALSE
+XRCC3	DNA damage	FALSE
+NUP153-AS1	None	FALSE
+BBLN	None	FALSE
+C1orf159	None	FALSE
+CAPN15	None	FALSE
+RHOT2	None	FALSE
+ZNF446	None	FALSE
+GPR173	None	TRUE
+OBSL1	None	FALSE
+UBA3	None	FALSE
+COL18A1	None	FALSE
+CSNK1G3	None	FALSE
+MAT2B	None	FALSE
+BLZF1	None	FALSE
+ACTR6	None	FALSE
+VTA1	None	FALSE
+PAIP2	None	FALSE
+PGLS-DT	None	FALSE
+PKD1P1	None	FALSE
+ARFIP1	None	FALSE
+CDKL2	None	TRUE
+TMEM160	None	FALSE
+REX1BD	None	FALSE
+DBNL	None	FALSE
+ZNF837	None	FALSE
+RNA45SN2	None	FALSE
+ACTR1B	None	FALSE
+POLG	None	FALSE
+POLGARF	None	FALSE
+MIGA2	None	FALSE
+RNA45SN1	None	FALSE
+IDH2-DT	None	FALSE
+STRN4	None	FALSE
+HIF1A-AS1	None	FALSE
+ARHGAP12	None	FALSE
+CD274	Immune Process|Lymph/Leuk Activation	TRUE
+RNASE6	None	FALSE
+CD84	Immune Process|Lymph/Leuk Activation	FALSE
+SH2D1A	Immune Process	FALSE
+GPR65	None	FALSE
+IL2RA	Lymph/Leuk Activation	FALSE
+TNFSF8	Lymph/Leuk Activation	FALSE
+IL7R	Lymph/Leuk Activation	FALSE
