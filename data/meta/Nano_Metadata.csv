@@ -1,0 +1,28 @@
+﻿Specimen_Type,Study_Patient_ID,Study_Sample_ID,Assay(s),Sample_Type,Diagnosis,Anatomical_Site,Date_of_Collection,Sex
+Tumor,S10-018931A6,BB24_01,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Right fallopian tube and ovary ,12/1/2010,F
+Tumor,S14-002474B2,BB24_02,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Left fallopian tube and ovary ,2/1/2014,F
+Tumor,S21-024801A2,BB24_03,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Unknown,9/1/2021,F
+Tumor,S10-016783A2,BB24_04,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,,11/1/2010,F
+Tumor,S22-010607B2,BB24_05,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,"Omentum, gastrocolic, partial omentectomy ",4/1/2022,F
+Tumor,S10-016752C1,BB24_06,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Omentum ,12/1/2010,F
+Tumor,S10-017623A2,BB24_07,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Right fallopian tube and ovary ,11/1/2010,F
+Tumor,S11-003355A1,BB24_08,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Omentum ,3/1/2011,F
+Tumor,S11-012085C1,BB24_09,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Omentum ,8/1/2011,F
+Tumor,S12-003590C5,BB24_10,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,"Uterus, fallopian tubes, ovaries ",3/1/2012,F
+Tumor,S12-008138A2,BB24_11,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Right fallopian tube and ovary ,5/1/2012,F
+Tumor,S13-003620D2,BB24_12,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Omentum ,3/1/2013,F
+Tumor,S13-002699A4,BB24_13,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Left fallopian tube and ovary ,2/1/2013,F
+Tumor,S13-008160A2,BB24_14,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Left fallopian tube and ovary ,5/1/2013,F
+Tumor,S16-023867D1,BB24_15,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Lymph node,11/1/2016,F
+Tumor,S16-007066C1,BB24_16,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Right fallopian tube and ovary ,4/1/2016,F
+Tumor,S21-032280A2,BB24_17,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Omentum ,11/1/2021,F
+Tumor,S13-009885J1,BB24_18,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Lymph node,6/1/2013,F
+Tumor,S17-018143A2,BB24_19,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Omentum ,8/1/2017,F
+Tumor,S13-019142C2,BB24_20,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Omentum ,11/1/2013,F
+Tumor,S13-021353A4,BB24_21,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Left fallopian tube and ovary ,12/1/13,F
+Tumor,S14-012409D2,BB24_22,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Left fallopian tube and ovary ,7/1/14,F
+Tumor,S22-009274B7,BB24_23,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,"Uterus, cervix, fallopian tubes and ovaries ",3/1/22,F
+Tumor,S21-028943A10,BB24_24,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Left fallopian tube and ovary ,10/1/21,F
+Tumor,S11-011709,BB24_25,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Right fallopian tube and ovary ,8/1/11,F
+Tumor,S12-011538,BB24_26,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,Left fallopian tube and ovary ,7/1/12,
+Tumor,S22-003884,BB24_27,xR Whole Transcriptome,Tumor,High grade serous carcinoma of the ovary,"Uterus, cervix, bilateral fallopian tubes and ovaries ",2/1/22,

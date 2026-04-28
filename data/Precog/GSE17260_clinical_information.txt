@@ -1,0 +1,111 @@
+sample ID	stage	cytoreductive surgery	Progression-free survival (M)	recurrence (1)	Overall survival (M)	death (1)
+s10	IIIc	optimal	55	0	55	0
+s100	IV	not optimal	1	1	1	1
+s104	IIIc	not optimal	24	0	24	0
+s106	IIIc	not optimal	15	1	26	0
+s107	IIIc	not optimal	17	1	33	1
+s108	IIIb	optimal	37	0	37	0
+s109	IIIc	not optimal	7	1	20	1
+s11	IIIb	optimal	46	1	47	0
+s110	IIIc	not optimal	60	0	60	0
+s111	IIIc	not optimal	18	1	57	1
+s112	IIIa	optimal	48	0	48	0
+s113	IIIc	not optimal	43	1	69	0
+s114	IIIc	not optimal	8	1	27	1
+s115	IIIb	not optimal	12	1	69	1
+s116	IIIc	not optimal	14	1	51	1
+s117	IIIc	optimal	17	0	17	0
+s118	IIIc	not optimal	8	1	17	0
+s119	IIIc	optimal	17	0	17	0
+s12	IIIc	optimal	8	1	24	1
+s120	IV	not optimal	6	1	52	1
+s122	IIIc	not optimal	8	1	25	1
+s123	IIIc	not optimal	15	1	22	1
+s127	IIIc	not optimal	23	1	53	1
+s129	IIIc	optimal	12	1	13	1
+s130	IIIc	not optimal	25	1	79	0
+s131	IIIa	optimal	74	0	74	0
+s132	IIIc	optimal	75	0	75	0
+s134	IIIa	optimal	30	1	62	1
+s136	IIIc	optimal	64	0	64	0
+s137	IIIc	optimal	46	0	46	0
+s139	IIIc	optimal	35	1	44	0
+s140	IV	not optimal	14	1	28	1
+s143	IIIc	not optimal	6	1	33	0
+s144	IV	not optimal	26	1	31	0
+s145	IIIc	not optimal	24	1	28	0
+s146	IIIb	not optimal	24	0	24	0
+s148	IIIc	optimal	15	0	15	0
+s149	IIIc	optimal	15	0	15	0
+s15	IIIb	optimal	18	1	49	0
+s150	IIIc	not optimal	14	0	14	0
+s151	IIIc	optimal	13	0	13	0
+s154	IIIb	optimal	9	1	9	0
+s156	IIIc	optimal	29	0	29	0
+s157	IIIb	optimal	26	0	26	0
+s16	IIIc	optimal	13	1	49	0
+s160	IIIc	not optimal	16	1	20	0
+s17	IIIb	optimal	47	0	47	0
+s171	IIIc	not optimal	3	1	15	1
+s172	IIIc	not optimal	2	1	12	1
+s173	IIIc	not optimal	5	1	26	1
+s174	IV	optimal	23	1	41	1
+s176	IV	not optimal	1	1	11	1
+s178	IV	optimal	17	1	47	1
+s18	IIIc	optimal	50	0	50	0
+s182	IIIc	not optimal	1	1	1	1
+s183	IIIc	not optimal	72	0	72	0
+s184	IIIc	optimal	65	0	65	0
+s185	IIIc	optimal	20	1	33	0
+s186	IIIc	optimal	12	1	29	0
+s2	IIIc	not optimal	18	1	49	1
+s20	IIIc	optimal	70	0	70	0
+s22	IIIc	not optimal	15	0	15	0
+s23	IIIc	not optimal	2	1	8	1
+s25	IIIb	optimal	29	1	80	1
+s27	IIIc	not optimal	8	1	11	1
+s31	IIIb	optimal	2	1	5	1
+s36	IV	optimal	23	1	28	1
+s37	IIIc	optimal	21	1	25	1
+s38	IIIb	optimal	15	1	64	1
+s4	IIIc	not optimal	2	1	41	1
+s41	IIIb	optimal	61	0	61	0
+s42	IIIc	not optimal	17	1	46	0
+s43	IIIc	not optimal	7	1	34	1
+s44	IIIc	not optimal	4	1	17	1
+s45	IIIc	optimal	35	1	39	0
+s49	IIIc	not optimal	33	1	37	0
+s50	IIIc	optimal	8	1	33	1
+s51	IIIc	not optimal	14	1	25	0
+s52	IV	not optimal	4	1	24	0
+s53	IV	not optimal	9	1	23	1
+s54	IIIb	optimal	30	0	30	0
+s55	IIIc	optimal	30	0	30	0
+s56	IIIc	not optimal	14	1	29	0
+s57	IIIc	optimal	12	1	23	0
+s58	IIIc	optimal	13	1	20	0
+s6	IIIc	optimal	12	1	32	1
+s60	IV	not optimal	47	1	81	0
+s61	IIIc	not optimal	26	1	74	0
+s62	IIIc	not optimal	11	1	26	1
+s64	IIIc	optimal	26	0	26	0
+s66	IIIc	optimal	19	0	19	0
+s67	IIIb	optimal	22	0	22	0
+s68	IIIa	optimal	22	0	22	0
+s69	IIIb	optimal	21	0	21	0
+s7	IIIa	optimal	19	1	42	1
+s72	IIIb	optimal	13	1	26	1
+s77	IIIc	not optimal	1	1	1	1
+s79	IIIc	optimal	16	1	27	1
+s80	IIIc	not optimal	12	1	68	1
+s83	IV	not optimal	28	1	64	0
+s85	IIIa	optimal	52	0	52	0
+s88	IV	optimal	51	1	65	0
+s89	IV	not optimal	13	1	33	1
+s90	IIIc	not optimal	29	1	51	1
+s91	IIIb	optimal	1	1	1	1
+s92	IV	not optimal	3	1	54	1
+s93	IIIb	optimal	51	0	51	0
+s94	IV	optimal	20	1	51	0
+s95	IIIc	optimal	4	1	39	0
+s97	IV	not optimal	8	1	28	0
