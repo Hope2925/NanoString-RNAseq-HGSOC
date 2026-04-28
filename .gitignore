@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# Large Files
+data/final_counts/GSE165897_HGSOC_SCEobject.rds
+data/counts/GSE165897_UMIcounts_HGSOC.tsv.gz
+data/Precog/HGSOC_Crijins_GSE13876_GPL7759.rds
+
 # Distribution / packaging
 .Python
 build/
